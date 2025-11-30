@@ -24,45 +24,25 @@ export default function About() {
 
             <div className="relative space-y-4">
               <p className="text-white">
-                Hello! I'm Nazmul Hossain, a passionate JavaScript developer
-                specializing in creating innovative web solutions and
-                user-friendly interfaces.{" "}
-                <span className="font-bold text-white">
-                  As the creator of the OlovaJS UI Framework
-                </span>
-                , I'm dedicated to simplifying development workflows.
+                Hello! I'm Ibraheem, a dedicated Full-Stack Web Developer focused on building fast, modern, and user-centered digital experiences. I specialize in creating clean front-end interfaces with React, Next.js, Tailwind, and TypeScript, along with powerful back-end systems using Node.js, Express, Firebase, and MongoDB.
               </p>
               <p className="text-white">
-                My focus is on making web development faster, easier, and
-                accessible to all developers. Currently, I'm expanding into
-                backend development to grow as a full-stack developer and create
-                seamless, robust web applications.
+                My passion lies in crafting websites that feel smooth, look elegant, and perform flawlessly. I care about the details — structure, speed, and design — because every project deserves precision and perfection.
               </p>
 
               <div className="pt-6">
                 <blockquote className="border-l-4 border-gray-300 pl-4">
                   <p className="text-white">
-                    I'm a lifelong learner and innovator, driven by a desire to
-                    contribute to the developer community with new ideas and
-                    tools that deliver real value. As the creator of OlovaJS,
-                    I'm pushing the boundaries of JavaScript frameworks to
-                    empower developers worldwide.
+                    I'm continuously learning advanced backend technologies and real-time workflows to strengthen my skills as a complete full-stack developer. My goal is simple: to build seamless, scalable, and impactful web applications that make life easier for users and businesses.
+                  </p>
+                  <p className="text-white mt-4">
+                    I believe in innovation, learning, and pushing boundaries with modern tools and frameworks. Whether it's a portfolio, landing page, dashboard, or full e-commerce store, I bring clarity, discipline, and creativity to every line of code.
                   </p>
 
                   <div className="mt-6 space-y-3">
                     <cite className="block font-medium text-white">
-                      Nazmul Hossain, Creator of
+                      Ibraheem — Full-Stack Developer. Crafting digital experiences with precision.
                     </cite>
-                    <div className="flex items-center gap-2">
-                      <img
-                        className="h-5 w-fit"
-                        src={OlovaLogo}
-                        alt="Olova Logo"
-                        height="20"
-                        width="auto"
-                      />
-                      <span className="text-white">OlovaJS</span>
-                    </div>
                   </div>
                 </blockquote>
               </div>

@@ -54,28 +54,28 @@ const ExperienceCard = ({
 const ExperienceSection = () => {
   const experiences = [
     {
-      icon: Network,
-      title: "WordPress Developer",
-      company: "Fiverr",
-      period: "2019 - 2020",
+      icon: Code2,
+      title: "Full-Stack Web Developer",
+      company: "Freelance",
+      period: "2023 - Present",
       description:
-        "Worked on developing and customizing WordPress websites for clients globally.",
+        "Built high-performance websites and full-stack applications using React, Next.js, Node.js, Express, Firebase, MongoDB, and Tailwind CSS. Delivered custom landing pages, dashboards, business sites, and e-commerce solutions with modern UI/UX and optimized performance.",
     },
     {
       icon: Layers,
-      title: "Junior Frontend Developer",
-      company: "Sera Programmer",
-      period: "2021 - 2023",
+      title: "Frontend Developer",
+      company: "Personal & Client Projects",
+      period: "2022 - Present",
       description:
-        "Assisted in building and optimizing user interfaces with a focus on responsive and interactive designs.",
+        "Designed and developed clean, responsive, and fast user interfaces. Worked with React, Next.js, TypeScript, Tailwind CSS, and Framer Motion to create smooth, modern user experiences. Focused on pixel-perfect layouts, reusable components, and high Lighthouse scores.",
     },
     {
-      icon: Code2,
-      title: "JavaScript Developer",
-      company: "OlovJS (Sera Programmer)",
+      icon: Network,
+      title: "Backend & API Developer",
+      company: "Project Work",
       period: "2023 - Present",
       description:
-        "Contributed to developing JavaScript libraries and enhancing framework functionalities.",
+        "Developed secure and scalable backend systems using Node.js, Express.js, and REST APIs. Integrated databases like Firebase, MongoDB, MySQL and handled authentication, user roles, payment integration, and cloud deployment. Improved performance, database structure, and API reliability across multiple projects.",
     },
   ];
 

@@ -2,47 +2,34 @@ import { ReactLenis } from "lenis/react";
 import { useTransform, motion, useScroll } from "framer-motion";
 import { useRef, useEffect } from "react";
 import PropTypes from "prop-types";
+import UmrahImg from "@/assets/images/umrah.png";
+import CozyPawsImg from "@/assets/images/ecommerce.png";
+import HealthImg from "@/assets/images/health.png";
 
 const projects = [
   {
-    title: "Olova! A Lightweight JavaScript Library",
+    title: "Umrah Booking Platform",
     description:
-      "A lightweight JavaScript library for creating beautiful, responsive UI components.",
-    src: "rock.jpg",
-    link: "https://i.postimg.cc/DwgWTfP0/Annotation-2025-03-19-113338.png",
-    color: "#5196fd",
-    githubLink: "https://github.com/olovajs/olova",
-    liveLink: "https://olova.js.org/",
+      "A modern Umrah booking platform built with TypeScript, Next.js, and Tailwind CSS. Features real-time booking, secure payment integration, and responsive design for seamless user experience.",
+    link: UmrahImg,
+    color: "#10b981",
+    liveLink: "https://book-umrah-cap.vercel.app/",
   },
   {
-    title: "A sleek portfolio built with React and Tailwind CSS ",
+    title: "CozyPawsCare - E-commerce Store",
     description:
-      "A sleek portfolio built with React and Tailwind CSS to showcase your skills, projects, and experience in a modern design.",
-    src: "tree.jpg",
-    link: "https://i.postimg.cc/J75CKyrs/Annotation-2025-04-01-203959.png",
-    color: "#8f89ff",
-    githubLink: "https://github.com/seraprogrammer/portfolio",
-    liveLink: "https://codervai.vercel.app",
+      "A full-featured e-commerce platform for pet care products. Built with React, Node.js, and integrated payment systems. Features product management, shopping cart, user authentication, and order tracking.",
+    link: CozyPawsImg,
+    color: "#f59e0b",
+    liveLink: "https://cozypawscare.com",
   },
   {
-    title: "🚀 CodeWhisperer",
+    title: "MyHealth Enrollment - Healthcare Portal",
     description:
-      "🚀 CodeWhisperer A powerful online code editor built with React and Tailwind CSS. Featuring real-time code execution, syntax highlighting, multi-language support, and a sleek UI. Start coding instantly! 💻✨",
-    src: "water.jpg",
-    link: "https://i.postimg.cc/J4jPVFY0/Annotation-2025-04-01-204723.png",
-    color: "#fff",
-    githubLink: "https://github.com/seraprogrammer/codewhisperer",
-    liveLink: "https://codewhisperer.vercel.app/",
-  },
-  {
-    title: "CodeKori 🔥",
-    description:
-      "CodeKori is a powerful online code editor built with React and Tailwind CSS. Featuring real-time code execution, syntax highlighting, multi-language support, and a sleek UI. Start coding instantly! 💻✨",
-    src: "house.jpg",
-    link: "https://i.postimg.cc/cHQr4fpR/Annotation-2025-04-01-205350.png",
-    color: "#ed649e",
-    githubLink: "https://github.com/seraprogrammer/CodeKori",
-    liveLink: "https://codekori.js.org",
+      "A comprehensive healthcare enrollment platform built with React, Next.js, and modern web technologies. Features secure user registration, health plan comparison, and streamlined enrollment process with real-time data validation.",
+    link: HealthImg,
+    color: "#3b82f6",
+    liveLink: "https://myhealthenrollment.net",
   },
 ];
 
@@ -114,7 +101,6 @@ export default function Projects() {
                 progress={scrollYProgress}
                 range={[i * 0.25, 1]}
                 targetScale={targetScale}
-                githubLink={project.githubLink}
                 liveLink={project.liveLink}
               />
             );
@@ -134,7 +120,6 @@ function Card({
   progress,
   range,
   targetScale,
-  githubLink,
   liveLink,
 }) {
   const container = useRef(null);
@@ -209,36 +194,6 @@ function Card({
               <div className="w-full h-[1px] bg-gray-800 mb-4 md:mb-6" />
 
               <div className="flex items-center gap-4">
-                {/* GitHub Link */}
-                <motion.a
-                  href={githubLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex items-center gap-2"
-                  whileHover={{ y: -3 }}
-                  transition={{ type: "spring", stiffness: 400 }}
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="22"
-                    height="22"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke={color}
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                  </svg>
-                  <span
-                    className="text-xs md:text-sm font-medium"
-                    style={{ color }}
-                  >
-                    Code
-                  </span>
-                </motion.a>
-
                 {/* Live Link */}
                 <motion.a
                   href={liveLink}
@@ -267,7 +222,7 @@ function Card({
                     className="text-xs md:text-sm font-medium"
                     style={{ color }}
                   >
-                    Live
+                    Visit Live Site
                   </span>
                 </motion.a>
               </div>
@@ -289,6 +244,5 @@ Card.propTypes = {
   progress: PropTypes.object.isRequired,
   range: PropTypes.array.isRequired,
   targetScale: PropTypes.number.isRequired,
-  githubLink: PropTypes.string.isRequired,
   liveLink: PropTypes.string.isRequired,
 };

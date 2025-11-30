@@ -42,20 +42,24 @@ const GridBackground = () => {
 
 export default function Hero() {
   const words = [
-    "Full-Stack Developer & UI/UX Enthusiast",
-    "JavaScript Developer & Creator of Olova.js",
-    "Learning MARN Stack",
-    "Linux & GitHub for DevOps Enthusiast",
+    "Full-Stack Web Developer (Frontend + Backend)",
+    "React.js & Next.js Specialist",
+    "TypeScript, Tailwind & Modern UI Expert",
+    "Firebase, MongoDB & SQL Database Handling",
+    "Shopify Store Developer & E-commerce Integrator",
   ];
 
   const [code] = useState(`
 const profile = {
-    name: 'Nazmul Hossain',
-    title: 'Full-Stack Developer | Cloud Enthusiast | Problem Solver',
+    name: 'Ibraheem Saleem',
+    title: 'Full-Stack Developer | React & Next.js Specialist | Node.js & API Developer | Firebase & MongoDB Expert | Modern UI with Tailwind | Problem Solver',
     skills: [
-        'React', 'NextJS', 'Redux', 'Express',
-        'MySQL', 'MongoDB', 'Docker', 'AWS', 'TypeScript',
-        'GraphQL', 'Git', 'Linux', 'Discord Development'
+        'HTML5', 'CSS3', 'JavaScript', 'TypeScript',
+        'React', 'Next.js', 'Redux Toolkit', 'Tailwind CSS',
+        'Node.js', 'Express.js', 'REST APIs',
+        'Firebase', 'MongoDB', 'PostgreSQL', 'MySQL',
+        'Git', 'GitHub', 'Vercel', 'Netlify', 'Shopify Development',
+        'Responsive UI/UX', 'Performance Optimization'
     ],
     hardWorker: true,
     quickLearner: true,
@@ -190,7 +194,7 @@ const profile = {
                     I&apos;m
                     <span className="typing-effect gradient-text">
                       {" "}
-                      Nazmul Hossain
+                      Ibraheem Saleem
                     </span>
                   </span>
                 </h1>
@@ -211,8 +215,7 @@ const profile = {
               {/* Description */}
               <div className="relative mb-8 sm:mb-12 max-w-xl">
                 <p className="text-base sm:text-xl text-gray-300/90 leading-relaxed">
-                  JavaScript lover 🚀 | OlovaJS creator 🔧 | Crafting frameworks
-                  and coding the future 💻✨
+                  Full-Stack Developer ⚡ | React & Next.js Expert 🔧 | Building Modern Web Apps with Node, Firebase & Tailwind 💻✨
                 </p>
               </div>
 

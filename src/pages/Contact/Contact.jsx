@@ -112,7 +112,9 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold">Email</h3>
-                    <p className="text-gray-400">olovajs@gmail.com</p>
+                    <a href="mailto:ibraheemink2007@gmail.com" className="text-gray-400 hover:text-blue-400 transition-colors">
+                      ibraheemink2007@gmail.com
+                    </a>
                   </div>
                 </div>
 
@@ -122,7 +124,19 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold">Location</h3>
-                    <p className="text-gray-400">Laxmipure, Natore 6400</p>
+                    <p className="text-gray-400">PIA Housing Society, Lahore</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center space-x-4">
+                  <div className="bg-blue-500/10 p-3 rounded-lg">
+                    <Phone className="w-6 h-6 text-blue-400" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold">Phone</h3>
+                    <a href="tel:+923094148871" className="text-gray-400 hover:text-blue-400 transition-colors">
+                      +92 309 4148871
+                    </a>
                   </div>
                 </div>
               </div>
@@ -130,7 +144,7 @@ export default function Contact() {
 
             {/* Contact Form */}
             <div className="backdrop-blur-lg bg-white/5 p-8 rounded-2xl shadow-xl">
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="space-y-6">
                 <div className="grid grid-cols-1 gap-6">
                   <div>
                     <input
@@ -208,13 +222,14 @@ export default function Contact() {
                 </div>
 
                 <button
-                  type="submit"
+                  type="button"
+                  onClick={handleSubmit}
                   className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-3 px-6 rounded-lg font-semibold flex items-center justify-center space-x-2 hover:opacity-90 transition-opacity"
                 >
                   <span>Send Message</span>
                   <Send className="w-4 h-4" />
                 </button>
-              </form>
+              </div>
 
               {/* Status Message */}
               {status && (

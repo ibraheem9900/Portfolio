@@ -35,12 +35,6 @@ export default function Header() {
       text: "Experience",
       path: "/experience",
     },
-    {
-      id: "education",
-      icon: FaGraduationCap,
-      text: "Education",
-      path: "/education",
-    },
     { id: "projects", icon: FaLaptopCode, text: "Projects", path: "/projects" },
     { id: "contact", icon: FaEnvelope, text: "Contact", path: "/contact" },
   ];
