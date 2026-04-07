@@ -5,6 +5,8 @@ import PropTypes from "prop-types";
 import UmrahImg from "@/assets/images/umrah.png";
 import CozyPawsImg from "@/assets/images/ecommerce.png";
 import HealthImg from "@/assets/images/health.png";
+import CarRentalImg from "@/assets/images/car-rental.png";
+import clothingBrandImg from "@/assets/images/clothing-brand.png";
 
 const projects = [
   {
@@ -35,15 +37,15 @@ const projects = [
     title: "Car rental website",
     description:
       "A modern car rental platform built with React, Next.js, and Tailwind CSS. Features real-time availability checking, secure booking, and responsive design for seamless user experience.",
-    link: HealthImg,
+    link: CarRentalImg,
     color: "#2c0000",
-    liveLink: "https://car-rentals-200.vercel.app/",
+    liveLink: "https://car-rentals-200.vercel.app/https://car-rentals-200.vercel.app/",
   },
   {
     title: "Clothing Brand Website",
     description:
       "A modern e-commerce platform for a clothing brand built with React, Next.js, and Tailwind CSS. Features product showcase, shopping cart, user authentication, and responsive design for seamless user experience.",
-    link: HealthImg,
+    link: clothingBrandImg,
     color: "#fff8ae",
     liveLink: "https://clothing-brand-200.vercel.app/",
   },
