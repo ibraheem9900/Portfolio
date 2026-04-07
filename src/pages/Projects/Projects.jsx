@@ -31,6 +31,22 @@ const projects = [
     color: "#3b82f6",
     liveLink: "https://myhealthenrollment.net",
   },
+  {
+    title: "Car rental website",
+    description:
+      "A modern car rental platform built with React, Next.js, and Tailwind CSS. Features real-time availability checking, secure booking, and responsive design for seamless user experience.",
+    link: HealthImg,
+    color: "#2c0000",
+    liveLink: "https://car-rentals-200.vercel.app/",
+  },
+  {
+    title: "Clothing Brand Website",
+    description:
+      "A modern e-commerce platform for a clothing brand built with React, Next.js, and Tailwind CSS. Features product showcase, shopping cart, user authentication, and responsive design for seamless user experience.",
+    link: HealthImg,
+    color: "#fff8ae",
+    liveLink: "https://clothing-brand-200.vercel.app/",
+  },
 ];
 
 export default function Projects() {
