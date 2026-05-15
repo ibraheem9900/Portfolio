@@ -7,6 +7,7 @@ import CozyPawsImg from "@/assets/images/ecommerce.png";
 import HealthImg from "@/assets/images/health.png";
 import CarRentalImg from "@/assets/images/car-rental.png";
 import clothingBrandImg from "@/assets/images/clothing-brand.png";
+import babyfittersImg from "@/assets/images/baby-fitters.png";
 
 const projects = [
   {
@@ -46,6 +47,14 @@ const projects = [
     description:
       "A modern e-commerce platform for a clothing brand built with React, Next.js, and Tailwind CSS. Features product showcase, shopping cart, user authentication, and responsive design for seamless user experience.",
     link: clothingBrandImg,
+    color: "#fff8ae",
+    liveLink: "https://clothing-brand-200.vercel.app/",
+  },
+  {
+    title: "A clothing Baby Brand Website",
+    description:
+      "and responsive des  ign for seamless user experience.",
+    link: babyfittersImg,
     color: "#fff8ae",
     liveLink: "https://clothing-brand-200.vercel.app/",
   },
