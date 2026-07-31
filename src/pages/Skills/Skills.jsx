@@ -2,7 +2,7 @@ import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import IconCloudDemo from "@/components/globe";
-import { Code2, Database, Cloud, ShoppingCart } from "lucide-react";
+import { Code2, Database, Cloud, ShoppingCart, Smartphone } from "lucide-react";
 import {
   FaReact,
   FaNodeJs,
@@ -27,6 +27,11 @@ import {
   SiFramer,
   SiNetlify,
   SiWoo,
+  SiExpo,
+  SiFastapi,
+  SiSupabase,
+  SiI18Next,
+  SiReactrouter,
 } from "react-icons/si";
 import { BsFileEarmarkCode, BsGrid1X2 } from "react-icons/bs";
 import { AiOutlineApi } from "react-icons/ai";
@@ -110,6 +115,43 @@ const SkillsSection = () => {
         },
         {
           name: "Responsive UI/UX Design",
+          icon: <BsGrid1X2 className="w-4 h-4 text-[#38B2AC]" />,
+        },
+      ],
+    },
+    {
+      icon: Smartphone,
+      title: "App Development",
+      color: "text-teal-400",
+      skills: [
+        { name: "React Native", icon: <FaReact className="w-4 h-4 text-[#61DAFB]" /> },
+        { name: "Expo", icon: <SiExpo className="w-4 h-4 text-white" /> },
+        {
+          name: "EAS Build & OTA Updates",
+          icon: <BsGrid1X2 className="w-4 h-4 text-[#10B981]" />,
+        },
+        {
+          name: "TanStack Router / Start",
+          icon: <SiReactrouter className="w-4 h-4 text-[#CA4245]" />,
+        },
+        {
+          name: "FastAPI",
+          icon: <SiFastapi className="w-4 h-4 text-[#009688]" />,
+        },
+        {
+          name: "Supabase",
+          icon: <SiSupabase className="w-4 h-4 text-[#3ECF8E]" />,
+        },
+        {
+          name: "Push Notifications",
+          icon: <MdSecurity className="w-4 h-4 text-[#10B981]" />,
+        },
+        {
+          name: "Multilingual / i18n (i18next)",
+          icon: <SiI18Next className="w-4 h-4 text-[#26A69A]" />,
+        },
+        {
+          name: "Mobile UI/UX",
           icon: <BsGrid1X2 className="w-4 h-4 text-[#38B2AC]" />,
         },
       ],

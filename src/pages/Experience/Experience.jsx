@@ -1,5 +1,5 @@
 import React from "react";
-import { Code2, Activity, Cpu, Layers, Network, Binary } from "lucide-react";
+import { Code2, Activity, Cpu, Layers, Network, Binary, Smartphone } from "lucide-react";
 
 const ExperienceCard = ({
   title,
@@ -53,6 +53,14 @@ const ExperienceCard = ({
 
 const ExperienceSection = () => {
   const experiences = [
+    {
+      icon: Smartphone,
+      title: "Web & Mobile Frontend Developer",
+      company: "SkillBuddy (Freelance Client Project)",
+      period: "2025 - Present",
+      description:
+        "Built the web and mobile frontend for SkillBuddy, a TaskRabbit-style service marketplace for the Baltic region. Delivered the web app with React 19, TanStack Router/Start, Tailwind v4, and shadcn/ui, and the companion mobile app with React Native & Expo, covering jobs, bidding, chat, payments, booking, and notifications. Migrated authentication from Supabase Auth to a custom FastAPI backend and implemented 5-language support.",
+    },
     {
       icon: Code2,
       title: "Full-Stack Web Developer",
