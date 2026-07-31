@@ -4,6 +4,7 @@ import { useRef, useEffect } from "react";
 import PropTypes from "prop-types";
 import { Smartphone } from "lucide-react";
 import SkillBuddyWebImg from "@/assets/images/skillbuddy-web.png";
+import SkillBuddyAppImg from "@/assets/images/skillbuddy-app-home.png";
 import AiSearchImg from "@/assets/images/ai-search-assistant.png";
 import UmrahImg from "@/assets/images/umrah.png";
 import CozyPawsImg from "@/assets/images/ecommerce.png";
@@ -26,8 +27,8 @@ const projects = [
     title: "SkillBuddy - Mobile App (iOS & Android)",
     description:
       "React Native + Expo companion app for SkillBuddy. Covers the full user journey: job browsing & bidding, real-time chat, in-app booking, secure payments, ratings & reviews, push notifications, and a support ticketing system. Currently in EAS build & internal testing.",
-    link: SkillBuddyWebImg,
-    color: "#8b5cf6",
+    link: SkillBuddyAppImg,
+    color: "#a78bfa",
     type: "mobile",
     demoLink: "",
   },
@@ -45,7 +46,7 @@ const projects = [
     description:
       "A premium taxi & transport booking platform for Umrah pilgrims and tourists in Saudi Arabia, covering airport-to-hotel transfers across Makkah, Madina, and Jeddah. Features a live vehicle fleet, tour packages, and one-click WhatsApp booking. Built with Next.js, TypeScript, and Tailwind CSS.",
     link: UmrahImg,
-    color: "#eab308",
+    color: "#facc15",
     type: "web",
     liveLink: "https://book-umrah-cap.vercel.app/",
   },
@@ -54,7 +55,7 @@ const projects = [
     description:
       "A full-featured e-commerce platform for pet care products. Built with React, Node.js, and integrated payment systems. Features product management, shopping cart, user authentication, and order tracking.",
     link: CozyPawsImg,
-    color: "#f59e0b",
+    color: "#fb923c",
     type: "web",
     liveLink: "https://cozypawscare.com",
   },
@@ -63,7 +64,7 @@ const projects = [
     description:
       "A licensed US health insurance enrollment platform helping individuals, families, and seniors compare and enroll in ACA, Medicare, and Life Insurance plans across 23 states. Features a fast quote-request form and real-time data validation. Built with React and Next.js.",
     link: HealthImg,
-    color: "#3b82f6",
+    color: "#60a5fa",
     type: "web",
     liveLink: "https://myhealthenrollment.net",
   },
@@ -72,7 +73,7 @@ const projects = [
     description:
       "A modern car rental platform built with React, Next.js, and Tailwind CSS. Features real-time availability checking, secure booking, and responsive design for a seamless user experience.",
     link: CarRentalImg,
-    color: "#2c0000",
+    color: "#f87171",
     type: "web",
     liveLink: "https://car-rentals-200.vercel.app/",
   },
@@ -81,7 +82,7 @@ const projects = [
     description:
       "An e-commerce storefront for a modern clothing brand, featuring a curated product showcase, shopping cart, user authentication, and responsive design for a seamless shopping experience. Built with React, Next.js, and Tailwind CSS.",
     link: clothingBrandImg,
-    color: "#fff8ae",
+    color: "#e5e7eb",
     type: "web",
     liveLink: "https://clothing-brand-200.vercel.app/",
   },
@@ -90,7 +91,7 @@ const projects = [
     description:
       "An e-commerce storefront for a baby clothing and essentials brand, offering garments, footwear, and accessories with soft, pastel-themed branding, a product catalog, and a responsive shopping cart experience.",
     link: babyfittersImg,
-    color: "#fbcfe8",
+    color: "#f9a8d4",
     type: "web",
     liveLink: "https://www.babyfitters.online/",
   },
@@ -149,10 +150,11 @@ export default function Projects() {
 
   return (
     <ReactLenis root>
-      <main className="bg-black" ref={container}>
+      <main className="bg-black pt-24 md:pt-28" ref={container}>
         <section className="text-white w-full bg-slate-950">
           {projects.map((project, i) => {
-            const targetScale = 1 - (projects.length - i) * 0.05;
+            const distanceFromEnd = projects.length - 1 - i;
+            const targetScale = Math.max(0.88, 1 - distanceFromEnd * 0.025);
             return (
               <Card
                 key={`p_${i}`}
@@ -199,16 +201,16 @@ function Card({
   return (
     <div
       ref={container}
-      className="h-screen flex items-center justify-center sticky top-0 project-container"
+      className="h-screen flex items-center justify-center sticky top-20 md:top-24 project-container"
     >
       <motion.div
         style={{
           scale,
-          top: `calc(-5vh + ${i * 25}px)`,
+          top: `${i * 14}px`,
           transform: `scale(var(--project-scale, 1))`,
           marginTop: "var(--project-margin, 0)",
         }}
-        className="relative -top-[25%] h-auto w-[90%] md:w-[85%] lg:w-[75%] xl:w-[65%] origin-top project-card"
+        className="relative h-auto w-[90%] md:w-[85%] lg:w-[75%] xl:w-[65%] origin-top project-card"
         whileHover={{
           y: -8,
           transition: { duration: 0.3 },
@@ -217,11 +219,11 @@ function Card({
         {/* Modern split card design */}
         <div className="w-full flex flex-col md:flex-row bg-zinc-900 rounded-2xl overflow-hidden shadow-xl">
           {/* Image section - full width on mobile, 55% on desktop */}
-          <div className="w-full md:w-[55%] h-[250px] md:h-[400px] lg:h-[450px] relative overflow-hidden">
+          <div className="w-full md:w-[55%] h-[250px] md:h-[400px] lg:h-[450px] relative overflow-hidden bg-zinc-950 flex items-center justify-center">
             <motion.img
               src={url}
               alt={title}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain"
               initial={{ scale: 1 }}
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.4 }}
