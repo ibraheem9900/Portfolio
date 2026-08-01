@@ -210,7 +210,7 @@ function Card({
           transform: `scale(var(--project-scale, 1))`,
           marginTop: "var(--project-margin, 0)",
         }}
-        className="relative h-auto w-[90%] md:w-[85%] lg:w-[75%] xl:w-[65%] origin-top project-card"
+        className="relative h-auto w-[90%] md:w-[80%] lg:w-[68%] xl:w-[58%] max-h-[82vh] origin-top project-card"
         whileHover={{
           y: -8,
           transition: { duration: 0.3 },
@@ -219,7 +219,11 @@ function Card({
         {/* Modern split card design */}
         <div className="w-full flex flex-col md:flex-row bg-zinc-900 rounded-2xl overflow-hidden shadow-xl">
           {/* Image section - full width on mobile, 55% on desktop */}
-          <div className="w-full md:w-[55%] h-[250px] md:h-[400px] lg:h-[450px] relative overflow-hidden bg-zinc-950 flex items-center justify-center">
+          <div
+            className={`w-full md:w-[55%] relative overflow-hidden bg-zinc-950 flex items-center justify-center ${
+              type === "mobile" ? "aspect-[4/3] md:aspect-[3/2]" : "aspect-[16/10]"
+            }`}
+          >
             <motion.img
               src={url}
               alt={title}
@@ -253,9 +257,9 @@ function Card({
           </div>
 
           {/* Content section - full width on mobile, 45% on desktop */}
-          <div className="w-full md:w-[45%] p-6 md:p-8 lg:p-10 flex flex-col justify-between">
+          <div className="w-full md:w-[45%] p-5 md:p-6 lg:p-8 flex flex-col justify-between overflow-hidden">
             <div>
-              <div className="flex items-center gap-3 mb-4 md:mb-6">
+              <div className="flex items-center gap-3 mb-3 md:mb-4">
                 <div
                   className="w-2 h-2 md:w-3 md:h-3 rounded-full"
                   style={{ backgroundColor: color }}
@@ -263,16 +267,16 @@ function Card({
                 <div className="h-[1px] w-12 md:w-20 bg-gray-600" />
               </div>
 
-              <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2 md:mb-4">
+              <h2 className="text-lg md:text-xl lg:text-2xl font-bold text-white mb-2 md:mb-3 leading-snug">
                 {title}
               </h2>
-              <p className="text-sm md:text-base text-gray-400 leading-relaxed line-clamp-3 md:line-clamp-none max-w-md">
+              <p className="text-sm text-gray-400 leading-relaxed line-clamp-4 lg:line-clamp-5 max-w-md">
                 {description}
               </p>
             </div>
 
-            <div className="mt-4 md:mt-auto pt-4">
-              <div className="w-full h-[1px] bg-gray-800 mb-4 md:mb-6" />
+            <div className="mt-4 pt-3">
+              <div className="w-full h-[1px] bg-gray-800 mb-3 md:mb-4" />
 
               <div className="flex items-center gap-4">
                 {hasAction ? (
